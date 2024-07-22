@@ -1,9 +1,9 @@
----
-title: "Monitor Goroutines"
-date: 2023-06-14T11:55:00-05:00
-summary: "A simple way to work with shared memory in Go"
-draft: false
----
+{:title "Monitor Goroutines"
+:date "2023-06-14T11:55:00-05:00"
+:summary "A simple way to work with shared memory in Go"}
+
+%%%
+
 This is about a small refactoring I did to fix some data races using basic Go concurrency primitives. This might be interesting to you if you're familiar with Go's concurrency model but haven't played with it much.
 
 Recently, I had to deal with data races for the first time while working on a [collaborative terminal text editor](https://github.com/burntcarrot/pairpad). After adding a new feature, I ran the program through Go's handy dandy [data race detector](https://go.dev/doc/articles/race_detector), and unfortunately, it was not very happy with me. I set about fixing the detected races. Halfway through some refactoring, I came upon the idea of [monitor](https://en.wikipedia.org/wiki/Monitor_(synchronization)) goroutines in [The Go Programming Language](https://gopl.io) as a way to protect shared memory. This idea was already pretty similar to our original design, and the natural implementation kind of fell out of the concurrency primitives in Go, so I found it a helpful way to think about solving conflicting memory access.
