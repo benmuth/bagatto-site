@@ -245,3 +245,8 @@ a:hover {
     color: var(--link-visited-color);
     text-decoration: none;
 } */
+
+div.summary {
+
+  background-color: var(--content-color);
+}

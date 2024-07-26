@@ -1,6 +1,7 @@
 {:title "Monitor Goroutines"
 :date "2023-06-14T11:55:00-05:00"
-:summary "A simple way to work with shared memory in Go"}
+:summary "A simple way to work with shared memory in Go"
+:draft false}
 
 %%%
 
