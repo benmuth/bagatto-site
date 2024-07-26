@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>{{(get-in args [:meta :title])}}</title>
-	<link rel="stylesheet" type="text/css" href="static/main.css">
+	<link rel="stylesheet" type="text/css" href="../static/main.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>blog</title>
@@ -16,7 +16,7 @@
 		<ul>
 		<a href="/about.html">about</a>
 		<a href="/blog.html">blog</a>
-		<a href="/resume.html">resume</a>
+		<a href="static/Resume-2023.pdf">resume</a>
 		</ul>
 	</nav>
 	

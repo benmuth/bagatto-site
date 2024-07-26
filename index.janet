@@ -6,6 +6,8 @@
                  :attrs bagatto/parse-base}
            :js {:src (bagatto/* "assets/js/main.js")
                 :attrs bagatto/parse-base}
+           :resume-pdf {:src (bagatto/* "assets/Resume-2023.pdf")
+                        :attrs bagatto/parse-base}
            :about {:src "pages/about.md"}
            :blog-posts {:src (bagatto/slurp-* "pages/blog/*.md")}})
 
@@ -17,6 +19,8 @@
                    :out (bagatto/renderer "/templates/about")}
            :blog {:dest "blog.html"
                   :out (bagatto/renderer "/templates/blog")}
+           :resume-pdf {:each :resume-pdf
+                        :dest (bagatto/path-copier "static")}
            :resume {:dest "resume.html" :out (bagatto/renderer "/templates/resume")}
            :posts {:each :blog-posts
                    :dest (bagatto/%p "posts" '%i :title '% ".html")
